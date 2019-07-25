@@ -2,7 +2,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
     private let tester = Tester()
-    private let testResults: [(String, Bool)]
+    private let testResults: [Lesson: [(String, TestResult)]]
 
     init() {
         testResults = tester.runAllTests()
@@ -31,19 +31,33 @@ class ViewController: UIViewController, UITableViewDataSource {
     }
 
     // MARK: - UITableViewDataSource implementation
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return testResults.count
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let lesson = Lesson.withIndex(section)
+        return testResults[lesson]!.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let (testName, testResult) = testResults[indexPath.row]
+        let lesson = Lesson.withIndex(indexPath.section)
+        let (testName, testResult) = testResults[lesson]![indexPath.row]
         cell.textLabel?.text = testName
-        if testResult == true {
+        switch testResult {
+        case .pass:
+            cell.textLabel?.textColor = UIColor(red: 0.2, green: 0.8, blue: 0.2, alpha: 1)
             cell.accessoryType = .checkmark
-        } else {
+        case .fail:
             cell.textLabel?.textColor = .red
+        case .skipped:
+            cell.textLabel?.textColor = UIColor(red: 0.3, green: 0.3, blue: 0.3, alpha: 1)
         }
         return cell
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return Lesson.withIndex(section).rawValue.capitalized
     }
 }

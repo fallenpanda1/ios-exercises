@@ -12,6 +12,12 @@
 		E9445CD022E7876A009041FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9445CCF22E7876A009041FC /* Assets.xcassets */; };
 		E9A8F60E22E790C9000BD696 /* Tester.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8F60D22E790C9000BD696 /* Tester.swift */; };
 		E9A8F61322E79557000BD696 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9A8F61222E79557000BD696 /* LaunchScreen.storyboard */; };
+		E9A8F61622E796AD000BD696 /* SwiftBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8F61522E796AD000BD696 /* SwiftBasics.swift */; };
+		E9A8F61922E7975B000BD696 /* Tester+SwiftBasics.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8F61822E7975B000BD696 /* Tester+SwiftBasics.swift */; };
+		E9A8F61B22E7A898000BD696 /* SwiftOptionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8F61A22E7A898000BD696 /* SwiftOptionals.swift */; };
+		E9A8F61D22E7D0B0000BD696 /* Tester+SwiftOptionals.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8F61C22E7D0B0000BD696 /* Tester+SwiftOptionals.swift */; };
+		E9A8F62522E7DC04000BD696 /* SwiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8F62422E7DC04000BD696 /* SwiftProtocols.swift */; };
+		E9A8F62C22E91C47000BD696 /* Tester+SwiftProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9A8F62B22E91C47000BD696 /* Tester+SwiftProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +28,12 @@
 		E9445CD422E7876A009041FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9A8F60D22E790C9000BD696 /* Tester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tester.swift; sourceTree = "<group>"; };
 		E9A8F61222E79557000BD696 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		E9A8F61522E796AD000BD696 /* SwiftBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftBasics.swift; sourceTree = "<group>"; };
+		E9A8F61822E7975B000BD696 /* Tester+SwiftBasics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tester+SwiftBasics.swift"; sourceTree = "<group>"; };
+		E9A8F61A22E7A898000BD696 /* SwiftOptionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftOptionals.swift; sourceTree = "<group>"; };
+		E9A8F61C22E7D0B0000BD696 /* Tester+SwiftOptionals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tester+SwiftOptionals.swift"; sourceTree = "<group>"; };
+		E9A8F62422E7DC04000BD696 /* SwiftProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftProtocols.swift; sourceTree = "<group>"; };
+		E9A8F62B22E91C47000BD696 /* Tester+SwiftProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Tester+SwiftProtocols.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +79,7 @@
 		E9A8F60F22E790E4000BD696 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E9A8F61722E7974A000BD696 /* 1 Swift Basics */,
 				E9A8F60D22E790C9000BD696 /* Tester.swift */,
 			);
 			path = Tests;
@@ -75,6 +88,7 @@
 		E9A8F61022E790EC000BD696 /* Lessons */ = {
 			isa = PBXGroup;
 			children = (
+				E9A8F61422E7966E000BD696 /* 1 Swift Basics */,
 			);
 			path = Lessons;
 			sourceTree = "<group>";
@@ -86,6 +100,26 @@
 				E9445CCF22E7876A009041FC /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		E9A8F61422E7966E000BD696 /* 1 Swift Basics */ = {
+			isa = PBXGroup;
+			children = (
+				E9A8F61522E796AD000BD696 /* SwiftBasics.swift */,
+				E9A8F61A22E7A898000BD696 /* SwiftOptionals.swift */,
+				E9A8F62422E7DC04000BD696 /* SwiftProtocols.swift */,
+			);
+			path = "1 Swift Basics";
+			sourceTree = "<group>";
+		};
+		E9A8F61722E7974A000BD696 /* 1 Swift Basics */ = {
+			isa = PBXGroup;
+			children = (
+				E9A8F61822E7975B000BD696 /* Tester+SwiftBasics.swift */,
+				E9A8F61C22E7D0B0000BD696 /* Tester+SwiftOptionals.swift */,
+				E9A8F62B22E91C47000BD696 /* Tester+SwiftProtocols.swift */,
+			);
+			path = "1 Swift Basics";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,7 +194,13 @@
 			files = (
 				E9A8F60E22E790C9000BD696 /* Tester.swift in Sources */,
 				E9445CCB22E78768009041FC /* ViewController.swift in Sources */,
+				E9A8F62522E7DC04000BD696 /* SwiftProtocols.swift in Sources */,
+				E9A8F61D22E7D0B0000BD696 /* Tester+SwiftOptionals.swift in Sources */,
+				E9A8F61922E7975B000BD696 /* Tester+SwiftBasics.swift in Sources */,
+				E9A8F61B22E7A898000BD696 /* SwiftOptionals.swift in Sources */,
+				E9A8F61622E796AD000BD696 /* SwiftBasics.swift in Sources */,
 				E9445CC922E78768009041FC /* AppDelegate.swift in Sources */,
+				E9A8F62C22E91C47000BD696 /* Tester+SwiftProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
