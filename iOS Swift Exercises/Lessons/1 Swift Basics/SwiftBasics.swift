@@ -42,4 +42,23 @@ class SwiftBasics {
     func multiplyValue(_ value: Int, by multiplier: Float) -> Int {
         return 0
     }
+
+    /// EXERCISE 6
+    /// Capitalize the first letter of each string
+    /// Example: ["apple", "banana", "cucumber"] -> ["Apple", "Banana", "Cucumber"]
+    func capitalize(strings: [String]) -> [String] {
+        // use the .map {} function
+        return []
+    }
+
+    /// EXERCISE 7
+    /// If a string is longer than max length, truncate the string and append three dots
+    /// to the end. The three dots will make the string longer than than max length, which
+    /// is ok.
+    /// Examples:
+    ///   truncateWithEllipsis("One Two Three", 3) = "One..."
+    ///   truncateWithEllipsis("One Two Three", 100) = "One Two Three"
+    func truncateWithEllipsis(string: String, maxLength: Int) -> String {
+        return string
+    }
 }

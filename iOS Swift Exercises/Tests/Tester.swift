@@ -26,6 +26,8 @@ class Tester: NSObject {
     private var currentTestErrors = [String]()
     private var hasAnyTestFailed = false
 
+    var errorsReceived: (([String]) -> ())?
+
     private lazy var allTestsGroupedByLesson: [Lesson: [Selector]] = {
         var testsByLesson = [Lesson: [Selector]]()
         var methodCount: UInt32 = 0
@@ -55,21 +57,22 @@ class Tester: NSObject {
         for lesson in Lesson.allCases {
             let tests = allTestsGroupedByLesson[lesson]!
             for test in tests {
-                // perform the current test
-                perform(test)
-
                 let testResult: TestResult
                 if didFailEarlier {
                     // skip all further tests after one fails
                     testResult = .skipped
-                } else if currentTestErrors.count > 0 {
-                    testResult = .fail
-                    didFailEarlier = true
                 } else {
-                    testResult = .pass
-                }
 
-                currentTestErrors.removeAll()
+                    // perform the current test
+                    perform(test)
+
+                    if currentTestErrors.count > 0 {
+                        testResult = .fail
+                        didFailEarlier = true
+                    } else {
+                        testResult = .pass
+                    }
+                }
 
                 // strip out prefix and clean up casing for method name
                 // e.g. convert testBasicAddIntegers -> addIntegers
@@ -85,6 +88,8 @@ class Tester: NSObject {
                 testResultsByLesson[lesson] = lessonResults
             }
         }
+
+        errorsReceived?(currentTestErrors)
 
         return testResultsByLesson
     }
@@ -110,9 +115,16 @@ class Tester: NSObject {
 
     func AssertEqual<T: Equatable>(actual: T, expected: T, error: String) {
         if actual != expected {
-            let errorWithExpected = error + " ... got \(expected)"
+            let errorWithExpected = error + " ... got \(prettify(object: actual))"
             currentTestErrors.append(errorWithExpected)
         }
+    }
+
+    private func prettify(object: Any) -> String {
+        if let string = object as? String {
+            return "\"\(string)\""
+        }
+        return "\(object)"
     }
 }
 
