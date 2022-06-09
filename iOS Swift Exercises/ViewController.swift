@@ -1,6 +1,9 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource {
+    private var onboardingPopupShownCount: Int = 0
+    private var hasShownPopup: Bool = false
+
     private let tester = Tester()
     private var testResults: [Lesson: [(String, TestResult)]]!
     private var didAnyTestPass: Bool {
@@ -89,6 +92,16 @@ class ViewController: UIViewController, UITableViewDataSource {
             width: consoleView.frame.width - 20,
             height: consoleView.frame.height - 20
         )
+    }
+
+    func showPopupIfNeeded() {
+        // don't show the popup more than 3 times
+        if onboardingPopupShownCount < 3 {
+            let popup = OnboardingModalViewController {
+                self.onboardingPopupShownCount += 1
+            }
+            self.present(popup, animated: true)
+        }
     }
 
     // MARK: - UITableViewDataSource implementation

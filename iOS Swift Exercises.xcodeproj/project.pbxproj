@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		676651632851A96200DB920C /* OnboardingModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 676651622851A96200DB920C /* OnboardingModalViewController.swift */; };
 		E9445CC922E78768009041FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445CC822E78768009041FC /* AppDelegate.swift */; };
 		E9445CCB22E78768009041FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9445CCA22E78768009041FC /* ViewController.swift */; };
 		E9445CD022E7876A009041FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9445CCF22E7876A009041FC /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		676651622851A96200DB920C /* OnboardingModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModalViewController.swift; sourceTree = "<group>"; };
 		E9445CC522E78767009041FC /* iOS Swift Exercises.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Swift Exercises.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9445CC822E78768009041FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E9445CCA22E78768009041FC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				E9445CC822E78768009041FC /* AppDelegate.swift */,
 				E9445CCA22E78768009041FC /* ViewController.swift */,
 				E9445CD422E7876A009041FC /* Info.plist */,
+				676651622851A96200DB920C /* OnboardingModalViewController.swift */,
 			);
 			path = "iOS Swift Exercises";
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				E9A8F62522E7DC04000BD696 /* SwiftProtocols.swift in Sources */,
 				E9A8F61D22E7D0B0000BD696 /* Tester+SwiftOptionals.swift in Sources */,
 				E9A8F61922E7975B000BD696 /* Tester+SwiftBasics.swift in Sources */,
+				676651632851A96200DB920C /* OnboardingModalViewController.swift in Sources */,
 				E9A8F61B22E7A898000BD696 /* SwiftOptionals.swift in Sources */,
 				E9A8F61622E796AD000BD696 /* SwiftBasics.swift in Sources */,
 				E9445CC922E78768009041FC /* AppDelegate.swift in Sources */,
